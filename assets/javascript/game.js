@@ -15,7 +15,7 @@ var psychicGuess = compChoice[Math.floor(Math.random() * compChoice.length)];
 var reset = function(){
 		guessesLeft = 10;
 		guessesMade = [];
-		psychicGuess = [];
+		psychicGuess = compChoice[Math.floor(Math.random() * compChoice.length)];
 	}
 
 //STARTING THE GAME
