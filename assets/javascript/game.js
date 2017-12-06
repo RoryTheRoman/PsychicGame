@@ -1,25 +1,40 @@
+//DEFINING VARIABLES
+
 var compChoice = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var wins = 0;
 var losses = 0;
 var guessesLeft = 10;
 var guessesMade = [];
 
+//DEFINING PSYCHIC GUESS AS A RANDOM COMPUTER CHOICE
+
 var psychicGuess = compChoice[Math.floor(Math.random() * compChoice.length)];
+
+//SETTING A RESET FUNCTION
+
 var reset = function(){
 		guessesLeft = 10;
 		guessesMade = [];
+		psychicGuess = [];
 	}
 
-document.onkeyup = function(event){
+//STARTING THE GAME
 
+document.onkeyup = function(event){
 	
+//DEFINING USER CHOICE AS THE KEYSTROKE
+
 	var userChoice = event.key;
-	
+
+//CHANGING INPUT FROM USER TO LOWER CASE
+
 	String.fromCharCode(event.keyCode).toLowerCase();
 
-	
+//LIMITING WHAT CHARACTERS THE USER CAN PRESS ON THE KEYBOARD	
 
 	if (event.keyCode >= 65 && event.keyCode <= 90) {
+
+//CREATING AN ALERT IF YOU CHOOSE THE SAME KEY TWICE
 
 		if (guessesMade.includes(userChoice)) {
 			alert("You pressed a duplicate key! Choose another");
@@ -28,13 +43,12 @@ document.onkeyup = function(event){
 
 		}
 
+//GAMEPLAY IF/ELSE:
 
 		if (userChoice === psychicGuess) {
 			wins++;
 			alert("You must be psychic!!!");
-			// var guessesMade = [];
-			// var guessesLeft = 10;
-			// var psychicGuess = compChoice[Math.floor(Math.random() * compChoice.length)];
+			
 			reset ();
 
 		} else {
@@ -48,16 +62,14 @@ document.onkeyup = function(event){
 			losses++;
 			alert("You ain't got the gift!");
 			reset();
-			// var guessesLeft = 10;
-			// var psychicGuess = compChoice[Math.floor(Math.random() * compChoice.length)];
-			// var guessesMade = [];
+			
 
 		
 
 		}
 
-	// reset();
-
+	
+//WRITING TO THE HTML
 
 	document.getElementById("#remainsTotal");
 	remainsTotal.innerHTML = "Guesses Left:" + " " + guessesLeft;
@@ -86,7 +98,6 @@ document.onkeyup = function(event){
 
 
 
-// document.querySelector("#psychicGame").innerHTML = html;
 
 
 }

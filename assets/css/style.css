@@ -1,0 +1,34 @@
+body {
+	background: url('../images/new-brighton-1239724.jpg');
+	}
+
+header {
+	/*display: inline-block;*/
+	text-align: center;
+	font-family: Impact, Charcoal, sans-serif;
+	font-size: 48px;
+	/*float: right;*/
+	padding-top:20px;
+	color: #876536;
+	
+
+}
+
+h3 {
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 18px;
+	color: #876536;
+}
+#gamePlay {
+	width: 100%;
+	max-width: 400px;
+	border-style: ridge;
+	border-color: #c09961;
+	/*border-color:#dbcba8;*/
+	border-width: 3px;
+	padding:10px;
+	margin:50px 0px 0px 50px;
+	border-radius:10px;
+
+
+}
