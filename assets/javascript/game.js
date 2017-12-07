@@ -24,11 +24,11 @@ document.onkeyup = function(event){
 	
 //DEFINING USER CHOICE AS THE KEYSTROKE
 
-	var userChoice = event.key;
+	var userChoice = event.key.toLowerCase();
 
 //CHANGING INPUT FROM USER TO LOWER CASE
 
-	String.fromCharCode(event.keyCode).toLowerCase();
+	// String.fromCharCode(event.keyCode).toLowerCase();
 
 //LIMITING WHAT CHARACTERS THE USER CAN PRESS ON THE KEYBOARD	
 
